@@ -48,7 +48,7 @@ let lastPersonI=0
 
 
 //En vær-api som henter data for bergen PS: ikke tæsj keyen min, kan koste cash as
-
+//funker ikke med github-pages fordi den github krever https, og weatherapi bruker http. Last ned for å se resultat
 fetch("http://api.weatherapi.com/v1/current.json?key=f6b3929fc9384d8a975143144231701&q=Bergen&aqi=no")
     .then(response => response.json())
     .then(response => vær(response))
