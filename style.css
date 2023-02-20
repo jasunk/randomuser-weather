@@ -1,0 +1,62 @@
+body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #564E58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #F2EFE9;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+img{
+    height: 7vw;
+    width: 7vw;
+}
+
+.message{
+    animation: spawn 0.3s;
+    background-color: #904E55;
+    width: 20vw;
+    height: 5vw;
+    margin-top: 0.2vw;
+    display: grid;
+    font-size: 0.8vw;
+
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "p n"
+                         "p c";
+}
+
+.pic{grid-area: p; width: 5vw; height: 5vw; border-radius: 50%;}
+.name{grid-area: n;padding: 0.3vw;}
+.content{grid-area: c;padding: 0.6vw 1vw;}
+
+h1{
+    position: absolute;
+    top: 0;
+    width: 100vh;
+    text-align: center;
+    background-color: #252627;
+}
+
+@keyframes spawn {
+    from{scale:0 0.75;}
+    to{scale:1 1;}
+}
+
+#weather{
+    position: absolute;
+    left: 0;
+    bottom: 5vw;
+    height: 10vh;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
